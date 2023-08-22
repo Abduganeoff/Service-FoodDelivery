@@ -8,24 +8,24 @@ export default defineType({
     {
       name: 'name',
       type: 'string',
-      title: 'Dish Name',
+      title: 'Dish name',
       validation: (rule) => rule.required(),
     },
     {
       name: 'description',
       type: 'string',
-      title: 'Dish description',
-      validation: (rule) => rule.required(),
+      title: 'Description',
+      validation: (rule) => rule.max(200),
     },
     {
       name: 'image',
       type: 'image',
-      title: 'image of the category',
+      title: 'Image of the dish',
     },
     {
       name: 'price',
-      type: 'number',
       title: 'Price of the dish in PLN',
+      type: 'number',
     },
   ],
 })

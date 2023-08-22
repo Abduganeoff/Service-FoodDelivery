@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineType} from 'sanity'
 
 export default defineType({
   name: 'featured',
@@ -8,7 +8,7 @@ export default defineType({
     {
       name: 'name',
       type: 'string',
-      title: 'Restaurant Name',
+      title: 'Restaurant name',
       validation: (rule) => rule.required(),
     },
     {
@@ -21,7 +21,7 @@ export default defineType({
       name: 'restaurants',
       type: 'array',
       title: 'Restaurants',
-      of: [{type: 'reference', to: [{type: 'restaurant'}]}],
+      of: [{type: 'reference', to: [{type: 'resturant'}]}],
     },
   ],
 })
